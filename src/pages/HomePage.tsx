@@ -18,36 +18,10 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import Final from "./finalalt.png";
-const MainLayout = styled.main`
-  border-radius: 4rem;
-  width: 100%;
-  height: 100%;
-  background-color: #051d39;
-  padding: 2.5rem 8rem;
-  max-width: 80rem;
-  display: grid;
-  grid-template-rows: 6rem auto;
-  grid-template-columns: 40% auto;
-  & nav {
-    grid-column: span 2;
-  }
-  & h1 {
-    font-size: 4rem;
-    line-height: 4rem;
-    font-weight: 400;
-  }
-  & h2 {
-    font-size: 2rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.75);
-  }
-  & p {
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  & article {
-    padding: 2rem 0;
-  }
+import { MainLayout } from "../layouts/MainLayout";
+const StyledArticle = styled.article`
+  padding: 2rem 0;
+ 
   & .control {
     display: flex;
     gap: 3rem;
@@ -63,7 +37,6 @@ const MainLayout = styled.main`
     }
   }
 `;
-
 const StyledLink = styled(Link)`
   color: black;
   padding: 0.5rem 1.5rem;
@@ -82,7 +55,7 @@ export const HomePage = () => {
   return (
     <MainLayout>
       <NavBar />
-      <article>
+      <StyledArticle>
         <h1>Sebastian G.</h1>
         <h2>Full Stack Web Developer Jr.</h2>
         <p>
@@ -90,7 +63,7 @@ export const HomePage = () => {
           to job offers! :D.
         </p>
         <div className="control">
-          <StyledLink to="/">Projects</StyledLink>
+          <StyledLink to="/projects">Projects</StyledLink>
           <StyledLink to="/">Contact</StyledLink>
         </div>
         <div className="techs">
@@ -107,7 +80,7 @@ export const HomePage = () => {
           <SiTypescript />
           <FaReact />
         </div>
-      </article>
+      </StyledArticle>
       <ImageWrapper>
         <img src={Final} alt="" />
       </ImageWrapper>

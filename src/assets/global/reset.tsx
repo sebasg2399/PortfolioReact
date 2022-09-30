@@ -31,7 +31,7 @@ export const reset = css`
   ol[role="list"] {
     list-style: none;
   }
-  a{
+  a {
     text-decoration: none;
   }
   /* Set core root defaults */
@@ -65,7 +65,6 @@ export const reset = css`
   select {
     font: inherit;
   }
-
   /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
   @media (prefers-reduced-motion: reduce) {
     html:focus-within {

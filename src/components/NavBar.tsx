@@ -10,6 +10,10 @@ const StyledNavBar = styled.nav`
   & .start {
     display: flex;
     gap: 1rem;
+    & h2 {
+      color: white;
+      font-size: 3.5rem;
+    }
   }
   & .end {
   }
@@ -41,7 +45,9 @@ export const NavBar = () => {
     <StyledNavBar>
       <div className="start">
         {/* <SearchIcon /> */}
-        <ThemeIcon />
+        <Link to="/">
+          <h2>Sebs</h2>
+        </Link>
       </div>
       <div className="end">
         <ul className="navbar-menu">
